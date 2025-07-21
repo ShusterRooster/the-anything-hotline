@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+    --font-display: "Unbounded", "serif"
+}
+
+:root {
+    font-family: "Dela Gothic One", "sans-serif";
+}
+
+@layer base {
+    h1 {
+        @apply text-2xl
+    }
+    h2 {
+        @apply text-xl
+    }
+    h3 {
+        @apply text-lg
+    }
+
+    a {
+        color: var(--color-blue-600);
+        text-decoration-line: underline;
+    }
+}
+
+@utility font-unbounded {
+    font-family: "Unbounded", "serif";
+}
