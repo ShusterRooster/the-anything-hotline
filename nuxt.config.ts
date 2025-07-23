@@ -7,7 +7,8 @@ export default defineNuxtConfig({
     '@nuxtjs/strapi',
     '@nuxtjs/mdc',
     '@nuxt/fonts',
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/seo'
   ],
 
   //fonts:

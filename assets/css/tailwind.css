@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 @theme {
-    --font-display: "Unbounded", "serif"
+    --font-unbounded: "Unbounded", "serif"
 }
 
 :root {
-    font-family: "Dela Gothic One", "sans-serif";
+    /*font-family: "Dela Gothic One", "sans-serif";*/
 }
 
 @layer base {

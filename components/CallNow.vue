@@ -7,7 +7,7 @@
     <div class="wave"/>
     <div id="fill"/>
 
-    <div class="grid grid-cols-3 absolute max-w-full bottom-0 px-3">
+    <div class="grid grid-cols-3 fixed max-w-full bottom-0 px-3">
       <img class="col-span-2" src="~/assets/callnow.gif" alt="call now!">
       <img class="self-center" src="~/assets/arrow.gif" alt="fun arrow">
     </div>
@@ -17,12 +17,14 @@
 
 <style scoped>
 section {
-  position: relative;
-  width: 100%;
-  height: 100%;
+  position: fixed;
   overflow: hidden;
 
-  --offset: 4rem;
+  --height: 9rem;
+
+  width: 100%;
+  height: var(--height);
+  bottom: 0;
 }
 
 #fill {
@@ -32,12 +34,11 @@ section {
   left: 0;
 
   width: 100%;
-  height: var(--offset);
+  height: calc(var(--height) - 100px);
 }
 
 section .wave {
-  position: absolute;
-  bottom: var(--offset);
+  top: 0;
   left: 0;
   width: 100%;
   height: 100px;
@@ -52,7 +53,7 @@ section .wave {
     background-position-x: 0;
   }
   100% {
-    background-position-x: -1000px;
+    background-position-x: 1000px;
   }
 }
 </style>
