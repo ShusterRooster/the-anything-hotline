@@ -3,13 +3,16 @@
 this is a new project. not much to say yet lol
 
 TODOs:
-* make form for adding to guest book
+* reduce size of icons!
+* nuxt image?
+* lazy loading of images
+* loading animations
+* see if loading from CMS for images is faster
+* 
 * make call now button useful
 * add more fun gifs!
 * make favicon!
 * fix SEO stuff
-* add back button for the guest book
-* maybe a cool transition!??!?!?
 * there needs to be a portal somewhere somehow bro
 * magical snail????
 * 

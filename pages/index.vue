@@ -34,7 +34,7 @@ const about = response.data.blocks!;
     </div>
 
     <div class="relative flex flex-col items-center">
-      <img id="guestbook" src="~/assets/guestbook.png" alt="sign my guestbook">
+      <img id="guestbook" src="../assets/guestbook/guestbook.png" alt="sign my guestbook">
       <NuxtLink to="/guestbook" class="absolute w-full h-full"/>
     </div>
 

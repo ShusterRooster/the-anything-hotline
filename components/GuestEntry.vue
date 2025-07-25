@@ -5,6 +5,8 @@ const props = defineProps<{
   entry: GuestEntry
 }>();
 
+const hueRotate = Math.floor(Math.random() * (360 + 1)) + 'deg';
+
 function formatDate(date: string) {
   const months = [
     "january",
@@ -21,7 +23,6 @@ function formatDate(date: string) {
     "december",
   ]
   const d = new Date(date)
-  console.log(formatTime(d))
   return `${formatTime(d)} @ ${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`
 }
 
@@ -36,8 +37,8 @@ function formatTime(date: Date) {
 
 <template>
   <div class="entry">
-    <img id="tape1" class="tape" src="~/assets/tape.png" alt="tape">
-    <img id="tape2" class="tape" src="~/assets/tape.png" alt="tape">
+    <img id="tape1" class="tape" src="~/assets/guestbook/tape.png" alt="tape">
+    <img id="tape2" class="tape" src="~/assets/guestbook/tape.png" alt="tape">
 
     <p class="border-l-4 border-black pl-2 font-bold">{{ entry.text }}</p>
     <p>- {{ entry.name }}</p>
@@ -56,15 +57,20 @@ function formatTime(date: Date) {
 
   position: relative;
   max-width: 85%;
+  min-width: 45%;
 
-  background: url("~/assets/paper.jpg") no-repeat center fixed;
+  background: url("~/assets/guestbook/paper.jpg") no-repeat center fixed;
   background-size: cover;
   font-family: "Gloria Hallelujah", cursive;
+
+  box-shadow: 19px 17px 37px -1px rgba(0,0,0,0.74);
 }
 
 .tape {
   position: absolute;
   width: 30%;
+
+  filter: hue-rotate(v-bind(hueRotate));
 }
 
 #tape1 {
