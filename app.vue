@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Analytics } from '@vercel/analytics/nuxt'
 const { find } = useStrapi();
 
 type Global = {
@@ -14,6 +15,7 @@ console.log(entries);
 </script>
 
 <template>
+  <Analytics/>
   <NuxtPage />
 </template>
 
