@@ -1,5 +1,5 @@
 export type GuestEntry = {
   name: string
-  date: number | string
+  date: number
   text: string
 };

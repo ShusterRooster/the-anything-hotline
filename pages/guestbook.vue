@@ -7,10 +7,20 @@ const { find } = useStrapi();
 
 const response = await find<GuestEntry>("guest-entries");
 const entries = response.data as GuestEntry[];
+const sortedEntries = entries.sort((a, b) => {
+  const aDate = new Date(a.date).valueOf()
+  const bDate = new Date(b.date).valueOf()
+
+  if (aDate < bDate) return 1
+  if (aDate > bDate) return -1
+
+  // dates must be equal
+  return 0;
+});
 
 // for (const entry of entries) {
 //   console.log(entry.date)
-//   const date = Date.parse(entry.date as string)
+//   const date = new Date(entry.date)
 //   console.log(date.valueOf())
 // }
 
@@ -27,7 +37,7 @@ const showSigner = ref(false);
 
     <div class="mb-40 flex flex-col items-center p-4">
       <GuestEntry
-        v-for="entry in [...entries].reverse()"
+        v-for="entry in sortedEntries"
         :key="entry.date.valueOf()"
         :entry="entry"
       />
@@ -38,7 +48,7 @@ const showSigner = ref(false);
       src="~/assets/guestbook/signnow.png"
       alt="sign now!"
       @click="showSigner = true"
-    />
+    >
 
     <Teleport to="body">
       <div id="mask" ref="mask"/>
