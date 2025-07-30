@@ -11,6 +11,10 @@ export default defineNuxtConfig({
     '@nuxtjs/seo'
   ],
 
+  fonts: {
+    provider: 'bunny'
+  }
+
   //fonts:
   //Unbounded
   //Handjet

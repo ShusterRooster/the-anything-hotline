@@ -37,8 +37,8 @@ function formatTime(date: Date) {
 
 <template>
   <div class="entry">
-    <img id="tape1" class="tape" src="~/assets/guestbook/tape.png" alt="tape">
-    <img id="tape2" class="tape" src="~/assets/guestbook/tape.png" alt="tape">
+    <img id="tape1" class="tape" src="../assets/guestbook/tape.png" alt="tape">
+    <img id="tape2" class="tape" src="../assets/guestbook/tape.png" alt="tape">
 
     <p class="border-l-4 border-black pl-2 font-bold">{{ entry.text }}</p>
     <p>- {{ entry.name }}</p>
