@@ -62,9 +62,9 @@ const showSigner = ref(false);
   position: fixed;
   right: 0;
   bottom: 0;
+  width: 50%;
 
   @apply mb-5;
-  @apply max-h-40;
   animation: 1s steps(2, end) infinite sign;
   transform-origin: right;
   filter: drop-shadow(16px 16px 8px rgba(0, 0, 0, 0.4));
@@ -108,7 +108,7 @@ const showSigner = ref(false);
 
   top: 0;
 
-  background: url("~/assets/guestbook/starbg.jpg") no-repeat center fixed;
+  background: url("~/assets/guestbook/starbg.jpg") no-repeat center;
   background-size: cover;
   filter: brightness(0.7);
   z-index: -1;
